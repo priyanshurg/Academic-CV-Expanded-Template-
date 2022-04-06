@@ -1,0 +1,16 @@
+Actual Resume Editing begins at Line 131 of the main.tex file. Everything before that is just declaring definitions and setting up new commands like \PORtitle, \school etc.
+
+
+Hints to better understand some of the new commands:
+
+\PORtitle = Positions of Responsibility, Title (i've also used it in the Competitive exams section)
+
+\begin{changemargin}{-0.35in}{-0.35in} = Edit the left and right borders of the page for the section you are using it in. Do not forget to use /end{changemargin} at the end.
+
+\school = Use it to describe your educational background
+
+\contact = Use it to modify the page heading- i.e. your name, contact details etc.
+
+\jobtitle{}{}{} - the three arguments are for Name of project/job role, where you did it and when you did it
+
+\jobdescription - Use it when describing what you did in a project/role. Main reason to use this is so that you can modify the page margins for this section independent of the rest of the resume.

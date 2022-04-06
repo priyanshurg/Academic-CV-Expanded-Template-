@@ -1,0 +1,359 @@
+\documentclass[9pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\hypersetup{
+    colorlinks=true,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=NavyBlue,%
+    urlcolor=NavyBlue,
+    breaklinks=true
+}
+\urlstyle{same}
+
+\leftmargin=0.05in
+\oddsidemargin=0.05in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.7in}{-0.35in}
+		\begin{large}
+		\scshape{\textbf{#1}}\\
+		\end{large}
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[3]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+      {{#2}}\\ \smallskip
+			{{#3}}\\
+		\end{center}
+	\end{changemargin}
+}
+
+\newcommand{\summary}[1]{
+	\begin{changemargin}{-0.35in}{-0.35in}
+    \smallskip
+		{#1}
+	\end{changemargin}
+}
+
+\newcommand{\jobdescription}[1]{
+	\begin{changemargin}{0.05in}{0.05in}
+    \smallskip
+		{#1}
+    \medskip
+	\end{changemargin}
+}
+
+\newcommand{\jobtitle}[3]{
+	\textbf{#1} \hfill \emph{#3}\\
+	\emph{#2}
+}
+\newcommand{\recommenderLeft}[5]{
+\begin{minipage}{0.45\textwidth}
+\Large{#1}\\
+\normalsize #2\\
+#3\\
+Email: #4\\
+Ph. No.: #5
+\end{minipage}
+}
+\newcommand{\recommenderRight}[5]{
+\begin{minipage}{4in}
+\Large{#1}\\
+\normalsize #2\\
+#3\\
+Email: #4\\
+Ph. No.: #5
+\end{minipage}
+}
+\newcommand{\PORtitle}[3]{
+	\textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.65in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[5]{
+	\textbf{#1}\emph{#5}\hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+\contact{John Doe}{Graduate Student, John Doe University}{+91-1234567890 $\|$ john@doe.com $\|$ www.johndoe-website.com}
+
+\sffamily
+
+\header{EDUCATION}
+\begin{body}
+	\vspace{14pt}
+\school{Master of Technology\footnote{Ongoing. Expected Graduation: July 2022}}{2020-Present}{Your Department, CGPA: XX/10  }{John Doe University, India}{}
+\vspace{14pt}
+\school{Bachelor of Technology}{2015-2019}{Your Department, CGPA: YY/10}{John Doe University, India}{, with Minor in Department 2}
+
+
+\end{body}
+\medskip
+
+\header{PUBLICATIONS} 
+
+\begin{body}
+	\vspace{14pt}
+	
+
+  	\begin{itemize} \itemsep -0pt
+      \item  \textbf{My Name}, Co-Author 2, Co-Author 3, Co-Author 4. (2022). \textit{Title of your publication if any}, Journal Details \\ doi: \href{enter doi here}{enter doi here as well}
+      
+     
+      
+  	\end{itemize} 
+\end{body}
+\medskip
+
+\header{RESEARCH EXPERIENCE}
+\begin{body}
+	\vspace{14pt}
+	
+%%% Founder and CTO at Vaczoway %%%
+  \jobtitle{Research Project 1}{Thesis Project $|$ Prof. Name \\(Sponsors if any)}{Aug 2021-Present}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id \textbf{bibendum enim}. 
+  		\item Ut feugiat nibh quis dolor interdum malesuada. Nulla \textbf{facilisi}. In facilisis maximus tellus in lobortis.  
+%  		\item Identified the \textbf{active and the passive regions} in granular flow using solid volume fraction and velocity contour maps
+  %		\item \textbf{Recommended} future steps for the extending the analysis to study \textbf{drying of jaggery powder}
+  \item Maecenas dictum eleifend imperdiet. Quisque accumsan aliquet vestibulum. \textbf{Nullam mauris} mi, commodo. 
+  	\end{itemize}
+  }
+  
+    \jobtitle{Research Project 1}{Thesis Project $|$ Prof. Name \\(Sponsors if any)}{Aug 2021-Present}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id \textbf{bibendum enim}. 
+  		\item Ut feugiat nibh quis dolor interdum malesuada. Nulla \textbf{facilisi}. In facilisis maximus tellus in lobortis.  
+%  		\item Identified the \textbf{active and the passive regions} in granular flow using solid volume fraction and velocity contour maps
+  %		\item \textbf{Recommended} future steps for the extending the analysis to study \textbf{drying of jaggery powder}
+  \item Maecenas dictum eleifend imperdiet. Quisque accumsan aliquet vestibulum. \textbf{Nullam mauris} mi, commodo. 
+  	\end{itemize}
+  }
+    \jobtitle{Research Project 1}{Thesis Project $|$ Prof. Name \\(Sponsors if any)}{Aug 2021-Present}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id \textbf{bibendum enim}. 
+  		\item Ut feugiat nibh quis dolor interdum malesuada. Nulla \textbf{facilisi}. In facilisis maximus tellus in lobortis.  
+%  		\item Identified the \textbf{active and the passive regions} in granular flow using solid volume fraction and velocity contour maps
+  %		\item \textbf{Recommended} future steps for the extending the analysis to study \textbf{drying of jaggery powder}
+  \item Maecenas dictum eleifend imperdiet. Quisque accumsan aliquet vestibulum. \textbf{Nullam mauris} mi, commodo. 
+  	\end{itemize}
+  }
+    \jobtitle{Research Project 1}{Thesis Project $|$ Prof. Name \\(Sponsors if any)}{Aug 2021-Present}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id \textbf{bibendum enim}. 
+  		\item Ut feugiat nibh quis dolor interdum malesuada. Nulla \textbf{facilisi}. In facilisis maximus tellus in lobortis.  
+%  		\item Identified the \textbf{active and the passive regions} in granular flow using solid volume fraction and velocity contour maps
+  %		\item \textbf{Recommended} future steps for the extending the analysis to study \textbf{drying of jaggery powder}
+  \item Maecenas dictum eleifend imperdiet. Quisque accumsan aliquet vestibulum. \textbf{Nullam mauris} mi, commodo. 
+  	\end{itemize}
+  }
+    \jobtitle{Research Project 1}{Thesis Project $|$ Prof. Name \\(Sponsors if any)}{Aug 2021-Present}
+  \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id \textbf{bibendum enim}. 
+  		\item Ut feugiat nibh quis dolor interdum malesuada. Nulla \textbf{facilisi}. In facilisis maximus tellus in lobortis.  
+%  		\item Identified the \textbf{active and the passive regions} in granular flow using solid volume fraction and velocity contour maps
+  %		\item \textbf{Recommended} future steps for the extending the analysis to study \textbf{drying of jaggery powder}
+  \item Maecenas dictum eleifend imperdiet. Quisque accumsan aliquet vestibulum. \textbf{Nullam mauris} mi, commodo. 
+  	\end{itemize}
+  }
+
+
+\end{body}
+\medskip
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Social Awareness
+
+\medskip
+
+\header{SELECT CONFERENCE PRESENTATIONS} 
+
+\begin{body}
+	\vspace{14pt}
+	
+
+  	\begin{itemize} \itemsep -0pt
+      \item Author 1\emph{*}\footnote{\emph{*} = Presenter}, \textbf{My Name}, Author 3, Title of Paper. Poster Presented at: \textbf{ Name of Conference and Exhibition}; 20XX May XX; Location 
+            \item \textbf{My Name\emph{*}}, Author 2, Author 3, Title of Paper. Poster Presented at: \textbf{Name of Conference and Exhibition}; 20XX May XX; Location
+             
+  	\end{itemize} 
+\end{body}
+
+
+
+\medskip
+
+% Scholastic Achievements
+\header{AWARDS AND SCHOLARSHIPS}
+\begin{body}
+	\vspace{14pt}
+\begin{itemize}\itemsep -0pt 
+        \item     \PORtitle{Award 1}{Awarding person/organisation/school}{20XX}
+
+    
+\end{itemize}
+
+\end{body}
+
+\medskip
+
+% Scholastic Achievements
+\header{COMPETITIVE EXAMS}
+\begin{body}
+	\vspace{14pt}
+\begin{itemize}\itemsep -0pt 
+        \item \PORtitle{Scored XXX/340 on the GRE Exam}{YYY/170Q + ZZZ/170V + XXX/6AWA}{20XX}
+        \item \PORtitle{Scored XXX/340 on the TOEFL Exam}{YYY/170Q + ZZZ/170V + XXX/6AWA}{20XX}
+
+        \item \PORtitle{Enter any important exams/competitions/olympiads you given}{}{20XX}
+    
+
+\end{itemize}
+
+\end{body}
+
+\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Experience
+\header{INDUSTRIAL EXPERIENCE}
+
+\begin{body}
+	\vspace{14pt}
+
+%%% Toopher %%%
+  \jobtitle{Work Ex. Title}{Team name, Company Name }{Jun 20XX - Jan 20YY}
+
+   \jobdescription{
+  	\begin{itemize} \itemsep -0pt  % reduce space between items
+  		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id \textbf{bibendum enim}. 
+  		\item Ut feugiat nibh quis dolor interdum malesuada. Nulla \textbf{facilisi}. In facilisis maximus tellus in lobortis.  
+%  		\item Identified the \textbf{active and the passive regions} in granular flow using solid volume fraction and velocity contour maps
+  %		\item \textbf{Recommended} future steps for the extending the analysis to study \textbf{drying of jaggery powder}
+  \item Maecenas dictum eleifend imperdiet. Quisque accumsan aliquet vestibulum. \textbf{Nullam mauris} mi, commodo. 
+  	\end{itemize}
+  }
+\end{body}
+
+% Positions of Responsibility
+
+\medskip%%%%%%%%%%%%%%%%%%%%%%%%
+
+\header{SELECT TECHNICAL COURSE PROJECTS}
+
+\begin{body}
+	\vspace{14pt}
+%%% IBM %%%
+	\jobtitle{Any other projects you'd want to highlight}{Course/Workshop name $|$ Instructor}{Jan-Apr 20XX}
+  
+\end{body}
+
+\medskip
+% Experience
+
+\header{VOLUNTARY SERVICE}
+
+\begin{body}
+	\vspace{14pt}
+	\PORtitle{Any Extra-curricular activities you were a part of}{Organising Body}{Aug 2018-Jul 2019}
+	 \vspace{-3pt}
+	  \jobdescription{
+    \begin{itemize} \itemsep -6pt  % reduce space between items
+
+      \item Some information of what you did, achieved etc. explained in S.T.A.R. format 
+    \end{itemize}}
+    \vspace{-3pt}
+	\PORtitle{Any Extra-curricular activities you were a part of}{Organising Body}{Aug 2018-Jul 2019}
+	 \vspace{-3pt}
+	  \jobdescription{
+    \begin{itemize} \itemsep -6pt  % reduce space between items
+
+      \item Some information of what you did, achieved etc. explained in S.T.A.R. format 
+    \end{itemize}}
+    \vspace{-3pt}
+
+\end{body}
+
+\medskip
+%%%%%%%%
+\header{GRADUATE LEVEL ELECTIVES COMPLETED}
+\begin{body}
+	\vspace{14pt}
+\textbf{At School 2:} Elective 1, Elective 2, Elective 3\\
+\vspace{5pt}
+\textbf{At School 1:Elective 1, Elective 2, Elective 3}
+
+\end{body}
+\medskip
+\header{REFEREES}
+
+\vspace{25pt}
+\begin{body}
+\recommenderLeft{Recommender  Name 1}{Position}{Organisation}{Email@gmail.com}{+91 12345689} \hfill \recommenderRight{Recommender  Name 2}{Position}{Organisation}{Email@gmail.com}{+91 12345689}
+\\ \vspace{7pt}
+\recommenderLeft{Recommender  Name 3}{Position}{Organisation}{Email@gmail.com}{+91 12345689} \hfill \recommenderRight{Recommender  Name 4}{Position}{Organisation}{Email@gmail.com}{+91 12345689}
+\end{body}
+
+
+\end{document}
